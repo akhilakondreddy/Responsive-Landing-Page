@@ -1,0 +1,151 @@
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+  color: #333;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00ccff;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+  background-color: #00ccff;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #0099cc;
+}
+
+/* Sections */
+.content {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.content img {
+  margin-top: 1rem;
+  width: 300px;
+  border-radius: 10px;
+}
+
+/* Mobile Menu */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+    text-align: right;
+    padding-right: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+/* Navbar default style */
+#navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: transparent;
+  color: white;
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+
+/* Navbar after scrolling */
+#navbar.scrolled {
+  background-color: #111;  /* You can change this color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
